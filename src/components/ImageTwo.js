@@ -20,7 +20,7 @@ window.addEventListener("scroll", reveal);
 const ImageTwo = () => (
   <Parallax className="image" strength={800}>
     <div className="contenttwo">
-      <img className="SelfImage reveal" src={SelfImage}></img>
+      <img className="SelfImage reveal" alt="imageself" src={SelfImage}></img>
       <div className="Container"></div>
       <div className="AboutText reveal">
         <p>

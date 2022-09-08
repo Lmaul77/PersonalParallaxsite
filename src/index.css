@@ -696,7 +696,7 @@ header ul li .headerbutton.active
   transform: translateY(-20px);
 }
 
-.contactform .inputBox input[type="submit"] {
+.contactform .inputBox button[type="submit"] {
   width: 100px;
   background: #000000;
   color: #fff;
@@ -706,7 +706,7 @@ header ul li .headerbutton.active
   font-size: 18px;
 }
 
-.contactform .inputBox input[type="submit"]:hover {
+.contactform .inputBox button[type="submit"]:hover {
   background: #FFFFFF;
   color: #000000;
   font-size: 18px;

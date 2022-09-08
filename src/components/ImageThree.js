@@ -1,5 +1,5 @@
 import { Parallax } from "react-parallax";
-import React, { useState } from "react";
+import React from "react";
 import Tilt from "react-parallax-tilt";
 
 function reveal() {

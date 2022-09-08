@@ -6,7 +6,6 @@ import {
   ImageThree,
   ImageFour,
   ImageFive,
-  ScrollCheck,
 } from "./components";
 
 function App() {
