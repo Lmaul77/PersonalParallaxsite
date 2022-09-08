@@ -11,3 +11,764 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.image {
+  position: absolute;
+  height: 100vh;
+}
+
+.contenttwo img {
+  position: absolute;
+  top: 16vh;
+  left: 5vw;
+  height: 70vh;
+  width: 30vw;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+.AboutText {
+  position: absolute;
+  top: 16vh;
+  left: 42.5vw;
+  width: 50vw;
+  color: white;
+  text-indent: 2em;
+  font-size: 1vw;
+  font-weight: 500;
+  z-index: 200;
+}
+
+.Container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(#FFFFFF, #000000);
+  color: #FFFFFF;
+}
+
+/* .Container::before {
+  content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #363636, transparent);
+    z-index: 100;
+} */
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.content span.img-txt {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+}
+
+.img-txt {
+  position: relative;
+  font-size: 3vw;
+  color: #000000;
+}
+
+.img-txt::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  border-right: 2px solid #FFFFFF;
+  overflow: hidden;
+  animation: IntroAnimation 4s linear forwards;
+  white-space: nowrap;
+}
+
+@keyframes IntroAnimation {
+  0%
+  {
+      width: 0;
+  }
+  20%
+  {
+      width: 20%;
+  }40%
+  {
+      width: 40%;
+  }60%
+  {
+      width: 60%;
+  }80%
+  {
+      width: 80%;
+  }100%
+  {
+      width: 100%;
+  }
+}
+
+#btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #000000;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    z-index: 1000;
+}
+
+header .HeaderTitle
+{
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-left: 100px;
+}
+
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 100px;
+}
+
+header ul li
+{
+    list-style: none;
+}
+
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #000000;
+    border-radius: 20px;
+}
+
+header ul li a:hover, 
+header ul li a.active
+{
+    background: #000000;
+    color: #FFFFFF;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.ProjectPage {
+  background: linear-gradient(#000000, #FFFFFF);
+  height: 100vh;
+  border: none;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ProjectPageTwo {
+  background: linear-gradient(#FFFFFF, #000000);
+  height: 100vh;
+  border: none;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ImageFive {
+  background: linear-gradient(#000000, #000000);
+  height: 100vh;
+  border: none;
+  width: 100vw;
+}
+
+.topsecretcard {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: 310px 350px 40px;
+  grid-template-areas: "image" "text";
+  
+  font-family: roboto;
+  border-radius: 18px;
+  background: #1d1d1d;
+  color: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align: justify;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.rgb::after {
+  content: "";
+  background: linear-gradient(45deg,
+  #FFFFFF 0%,
+  #000000 10%,
+  #FFFFFF 20%,
+  #000000 30%,
+  #FFFFFF 40%,
+  #000000 50%,
+  #FFFFFF 60%,
+  #000000 70%,
+  #FFFFFF 80%,
+  #000000 90%,
+  #FFFFFF 100%
+  )
+  repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+  filter: blur(8px);
+  z-index: -1;
+  animation: rgb 6s linear infinite;
+}
+
+@keyframes rgb {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.topsecretcard-image {
+  grid-area: image;
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("./img/TopSecret.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+}
+
+.topsecretcard-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.topsecretcard-text .topsecretdate {
+  color: rgb(255,7,110);
+  font-size: 16px;
+}
+
+.topsecretcard-text p {
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.topsecretcard-text h3 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.tictactoecard {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: 310px 350px 40px;
+  grid-template-areas: "image" "text";
+  
+  font-family: roboto;
+  border-radius: 18px;
+  background: #1d1d1d;
+  color: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align: justify;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.tictactoecard-image {
+  grid-area: image;
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("./img/TicTactoe.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+.tictactoecard-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.tictactoecard-text .tictactoedate {
+  color: rgb(255,7,110);
+  font-size: 16px;
+}
+
+.tictactoecard-text p {
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.tictactoecard-text h3 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.strangersthingscard {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: 310px 350px 40px;
+  grid-template-areas: "image" "text";
+  
+  font-family: roboto;
+  border-radius: 18px;
+  background: #1d1d1d;
+  color: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align: justify;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.gap {
+  padding: 2.5rem;
+}
+
+.strangersthingscard-image {
+  grid-area: image;
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("./img/StrangersThings.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+.strangersthingscard-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.strangersthingscard-text .strangersthingsdate {
+  color: rgb(255,7,110);
+  font-size: 16px;
+}
+
+.strangersthingscard-text p {
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.strangersthingscard-text h3 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.fitnesstrackercard {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: 310px 350px 40px;
+  grid-template-areas: "image" "text";
+  
+  font-family: roboto;
+  border-radius: 18px;
+  background: #1d1d1d;
+  color: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align: justify;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.fitnesstrackercard-image {
+  grid-area: image;
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("./img/FitnessTracker.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+.fitnesstrackercard-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.fitnesstrackercard-text .fitnesstrackerdate {
+  color: rgb(255,7,110);
+  font-size: 16px;
+}
+
+.fitnesstrackercard-text p {
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.fitnesstrackercard-text h3 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.userhubcard {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: 310px 350px 40px;
+  grid-template-areas: "image" "text";
+  
+  font-family: roboto;
+  border-radius: 18px;
+  background: #1d1d1d;
+  color: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align: justify;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.userhubcard-image {
+  grid-area: image;
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("./img/UserHub.png");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+.userhubcard-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.userhubcard-text .userhubdate {
+  color: rgb(255,7,110);
+  font-size: 16px;
+}
+
+.userhubcard-text p {
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.userhubcard-text h3 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.qwirtycard {
+  display: grid;
+  grid-template-columns: 500px;
+  grid-template-rows: 310px 350px 40px;
+  grid-template-areas: "image" "text";
+  
+  font-family: roboto;
+  border-radius: 18px;
+  background: #1d1d1d;
+  color: white;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+  text-align: justify;
+
+  transition: 0.5s ease;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.qwirtycard-image {
+  grid-area: image;
+  background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("./img/Qwirty.jpg");
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background-size: cover;
+  background-position: center;
+}
+
+.qwirtycard-text {
+  grid-area: text;
+  margin: 25px;
+}
+
+.qwirtycard-text .qwirtydate {
+  color: rgb(255,7,110);
+  font-size: 16px;
+}
+
+.qwirtycard-text p {
+  color: grey;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.qwirtycard-text h3 {
+  margin-top: 0px;
+  font-size: 28px;
+}
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  background: linear-gradient(#000000, #FFFFFF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact .contactcontent {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .contactcontent h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact .contactcontent p {
+  font-weight: 300;
+  color: #fff;
+}
+
+.contactcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.contactcontainer .contactinfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactcontainer .contactinfo .contactbox {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.contactcontainer .contactinfo .contactbox .contacticon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.contactcontainer .contactinfo .contactbox .contacttext {
+  display: flex;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #000000;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.contactcontainer .contactinfo .contactbox .contacttext h3 {
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.contactform {
+  width: 40%;
+  padding: 40px;
+  background: transparent;
+}
+
+.contactform h2 {
+  font-size: 30px;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+.contactform .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactform .inputBox input,
+.contactform .inputBox textarea
+{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+  background: transparent;
+}
+
+.contactform .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #000000;
+}
+
+.contactform .inputBox input:focus ~ span,
+.contactform .inputBox input:valid ~ span,
+.contactform .inputBox textarea:focus ~ span,
+.contactform .inputBox textarea:valid ~ span {
+  color: #FFFFFF;
+  font-size: 14px;
+  transform: translateY(-20px);
+}
+
+.contactform .inputBox input[type="submit"] {
+  width: 100px;
+  background: #000000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+.contactform .inputBox input[type="submit"]:hover {
+  background: #FFFFFF;
+  color: #000000;
+  font-size: 18px;
+}
+
+.socialicons {
+  color: #FFFFFF;
+  height: 6vh;
+  width: 6vw;
+}
+
+.socialicons:hover {
+  color: #000000;
+}
+
+.contactheader {
+  color: #FFFFFF;
+  font-size: 3rem;
+  font-weight: 500;
+  position: relative;
+  bottom: 5vh;
+}
+
+.websitebutton {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: 56px;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: absolute;
+  right: 4vw;
+  bottom: 4vh;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.websitebutton::before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.websitebutton:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+@media (min-width: 768px) {
+  .websitebutton {
+    padding: 16px 48px;
+  }
+}

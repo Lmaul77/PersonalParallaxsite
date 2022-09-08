@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import {
+  Header,
+  ImageOne,
+  ImageTwo,
+  ImageThree,
+  ImageFour,
+  ImageFive
+} from "./components";
 
 function App() {
+  const [topSecretScale, setTopSecretScale] = useState(1.02);
+  const [ticTacToeScale, setticTacToeScale] = useState(1.02);
+  const [strangersThingsScale, setstrangersThingsScale] = useState(1.02);
+  const [fitnessTrackerScale, setfitnessTrackerScale] = useState(1.02);
+  const [userHubScale, setuserHubScale] = useState(1.02);
+  const [qwirtyScale, setqwirtyScale] = useState(1.02);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <ImageOne />
+      <ImageTwo />
+      <ImageThree
+        topSecretScale={topSecretScale}
+        setTopSecretScale={setTopSecretScale}
+        ticTacToeScale={ticTacToeScale}
+        setticTacToeScale={setticTacToeScale}
+        strangersThingsScale={strangersThingsScale}
+        setstrangersThingsScale={setstrangersThingsScale}
+      />
+      <ImageFour
+        fitnessTrackerScale={fitnessTrackerScale}
+        setfitnessTrackerScale={setfitnessTrackerScale}
+        userHubScale={userHubScale}
+        setuserHubScale={setuserHubScale}
+        qwirtyScale={qwirtyScale}
+        setqwirtyScale={setqwirtyScale}
+      />
+      <ImageFive />
     </div>
   );
 }
