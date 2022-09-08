@@ -15,10 +15,12 @@ function App() {
   const [fitnessTrackerScale, setfitnessTrackerScale] = useState(1.02);
   const [userHubScale, setuserHubScale] = useState(1.02);
   const [qwirtyScale, setqwirtyScale] = useState(1.02);
+  const [width, setWidth] = useState(window.innerWidth);
+
   return (
     <div className="App">
       <Header />
-      <ImageOne />
+      <ImageOne width={width} setWidth={setWidth} />
       <ImageTwo />
       <ImageThree
         topSecretScale={topSecretScale}

@@ -1,6 +1,7 @@
+import React from "react";
 import { Parallax } from "react-parallax";
 
-const ImageOne = () => (
+const ImageOne = ({width, setWidth}) => (
   <Parallax className="image" strength={800}>
     <div className="content">
       <span
@@ -13,7 +14,15 @@ const ImageOne = () => (
         to="/about"
         id="btn"
         onClick={() => {
-          window.scrollTo({ behavior: "smooth", top: 1000, left: 0 });
+            function handleResize() {
+                setWidth(window.innerWidth)
+            }
+            handleResize()
+            if (width <= 880) {
+                window.scrollTo({ behavior: "smooth", top: 840, left: 0 });
+            } else {
+                window.scrollTo({ behavior: "smooth", top: 1000, left: 0 });
+            }
         }}
       >
         Explore
