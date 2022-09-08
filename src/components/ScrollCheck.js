@@ -9,14 +9,14 @@ const ScrollCheck = () => {
     direction,
     position,
     relativeDistance,
-    totalDistance
+    totalDistance,
   } = useScrollData({
     onScrollStart: () => {
-      console.log('Started scrolling');
+      console.log("Started scrolling");
     },
     onScrollEnd: () => {
-      console.log('Finished scrolling');
-    }
+      console.log("Finished scrolling");
+    },
   });
 
   return (
@@ -25,7 +25,7 @@ const ScrollCheck = () => {
         Current position: {position.x}/{position.y}
       </p>
     </div>
-  )
+  );
 };
 
-export default ScrollCheck
+export default ScrollCheck;

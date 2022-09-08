@@ -62,16 +62,6 @@ body::-webkit-scrollbar-thumb {
   color: #FFFFFF;
 }
 
-/* .Container::before {
-  content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #363636, transparent);
-    z-index: 100;
-} */
-
 .content {
   display: flex;
   align-items: center;
@@ -94,20 +84,6 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   font-size: 3vw;
   color: #000000;
-}
-
-.img-txt::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: #000000;
-  border-right: 2px solid #FFFFFF;
-  overflow: hidden;
-  animation: IntroAnimation 4s linear forwards;
-  white-space: nowrap;
 }
 
 @keyframes IntroAnimation {
@@ -144,6 +120,12 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.5em;
     z-index: 9;
     transform: translateY(100px);
+    cursor: pointer;
+}
+
+#btn:hover {
+  background: #FFFFFF;
+  color: #000000;
 }
 
 header
@@ -159,52 +141,67 @@ header
     z-index: 1000;
 }
 
+
 header .HeaderTitle
 {
-    color: #000000;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-left: 100px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-left: 100px;
+  border: none;
+  background-color: transparent;
+}
+
+
+header .HeaderTitle:hover {
+  cursor: pointer;
 }
 
 header ul
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 100px;
+  position: relative;
+  left: 30vw;
 }
 
 header ul li
 {
-    list-style: none;
+  list-style: none;
 }
 
 header ul li .headerbutton
 {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bolder;
-    padding: 6px 20px;
-    color: #000000;
-    background-color: transparent;
-    border-radius: 20px;
-    border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bolder;
+  padding: 6px 20px;
+  color: #000000;
+  background-color: transparent;
+  border-radius: 20px;
+  border: none;
 }
 
 header ul li .headerbutton:hover, 
 header ul li .headerbutton.active
 {
-    background: #000000;
+  background: #000000;
     color: #FFFFFF;
     cursor: pointer;
-}
+  }
 
-.reveal {
-  position: relative;
+  .mobilehamburger {
+    display: none;
+  }
+  
+  
+  .reveal {
+    position: relative;
   transform: translateY(150px);
   opacity: 0;
   transition: 2s all ease;
@@ -255,10 +252,10 @@ header ul li .headerbutton.active
   color: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   text-align: justify;
-
+  
   transition: 0.5s ease;
   cursor: pointer;
-
+  
   position: relative;
 }
 
@@ -333,10 +330,10 @@ header ul li .headerbutton.active
   color: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   text-align: justify;
-
+  
   transition: 0.5s ease;
   cursor: pointer;
-
+  
   position: relative;
 }
 
@@ -382,15 +379,11 @@ header ul li .headerbutton.active
   color: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   text-align: justify;
-
+  
   transition: 0.5s ease;
   cursor: pointer;
-
+  
   position: relative;
-}
-
-.gap {
-  padding: 2.5rem;
 }
 
 .strangersthingscard-image {
@@ -435,10 +428,10 @@ header ul li .headerbutton.active
   color: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   text-align: justify;
-
+  
   transition: 0.5s ease;
   cursor: pointer;
-
+  
   position: relative;
 }
 
@@ -484,10 +477,10 @@ header ul li .headerbutton.active
   color: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   text-align: justify;
-
+  
   transition: 0.5s ease;
   cursor: pointer;
-
+  
   position: relative;
 }
 
@@ -533,10 +526,10 @@ header ul li .headerbutton.active
   color: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   text-align: justify;
-
+  
   transition: 0.5s ease;
   cursor: pointer;
-
+  
   position: relative;
 }
 
@@ -568,6 +561,10 @@ header ul li .headerbutton.active
 .qwirtycard-text h3 {
   margin-top: 0px;
   font-size: 28px;
+}
+
+.mobiletilt {
+  margin: 2.5rem;
 }
 
 .contact {
@@ -603,6 +600,8 @@ header ul li .headerbutton.active
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  position: relative;
+  right: 20vw;
 }
 
 .contactcontainer .contactinfo {
@@ -643,6 +642,9 @@ header ul li .headerbutton.active
 }
 
 .contactform {
+  position: absolute;
+  right: 4vw;
+  top: 45vh;
   width: 40%;
   padding: 40px;
   background: transparent;
@@ -782,8 +784,191 @@ header ul li .headerbutton.active
   position: fixed;
   background-color: blue;
   color: #FFFFFF;
-    bottom: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+@media screen and (max-width: 880px) {
+  header .HeaderTitle {
+    font-size: 1em;
+    font-weight: 300;
+    padding-left: 25px;
+    padding-top: 20px;
+  }
+  header ul {
+    display: none;
+  }
+  .mobilehamburger {
+    position: absolute;
+    right: 2vw;
+    display: flex;
+    height: 1.25rem;
+    width: 1.25rem;
+    color: #000000;
+  }
+
+  .hamburgermenu {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    color: #FFFFFF;
+    position: absolute;
+    top: 5vh;
+    right: 1vw;
+    height: 20vh;
+    width: 1vw;
+    border: solid 2px black;
+    border-radius: 25%;
+  }
+
+  .hamburgermenu .headerbutton {
+    position: relative;
+    left: 7vw;
+    color: white;
+  }
+
+  #btn {
+    position: absolute;
+    top: 55vh;
+    left: 25vw;
+  }
+
+  .contenttwo img {
+    position: absolute;
+    top: 5vh;
+    left: 25vw;
+    height: 40vh;
+    width: 50vw;
+    border-radius: 20px;
+    z-index: 100;
+  }
+
+  .AboutText {
+    position: absolute;
+    top: 47.5vh;
+    width: 90%;
     left: 0;
+    color: white;
+    text-indent: 2em;
+    font-size: 2.3vw;
+    margin: 10px;
+    font-weight: 500;
+    z-index: 200;
+  }
+
+  .mobiletilt {
+    scale: 0.5;
+    margin: 0;
+  }
+
+  .topsecretcard {
+    position: relative;
+    top: 50vh;
+    grid-template-columns: 600px;
+    grid-template-rows: 200px 200px 100px;
+  }
+
+  .tictactoecard {
+    position: relative;
+    grid-template-columns: 600px;
+    grid-template-rows: 200px 200px 100px;
+  }
+
+  .strangersthingscard {
+    position: relative;
+    bottom: 50vh;
+    grid-template-columns: 600px;
+    grid-template-rows: 200px 200px 100px;
+  }
+
+  .fitnesstrackercard {
+    position: relative;
+    top: 50vh;
+    grid-template-columns: 600px;
+    grid-template-rows: 200px 200px 100px;
+  }
+
+  .userhubcard {
+    position: relative;
+    bottom: 5vh;
+    grid-template-columns: 600px;
+    grid-template-rows: 200px 200px 100px;
+  }
+
+  .qwirtycard {
+    position: relative;
+    bottom: 60vh;
+    grid-template-columns: 600px;
+    grid-template-rows: 200px 200px 100px;
+  }
+
+  .glare-wrapper {
+    display: none;
+  }
+
+  .ProjectPage {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .ProjectPageTwo {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .contactcontainer {
+    display: none
+  }
+
+  .contactcontent {
+    position: relative;
+    bottom: 25vh;
+  }
+
+  .socialicons {
+    width: 11vw;
+  }
+
+  .contactform {
+    position: absolute;
+  right: 4vw;
+  top: 40vh;
+  width: 80%;
+  padding: 40px;
+  background: transparent;
+  }
+}
+
+@media screen and (max-width: 1449px) {
+  .img-txt::before {
+    content: attr(data-text);
+    position: relative;
+    left: 2vw;
+    font-size: 4vw;
+    top: 0;
     width: 100%;
-    z-index: 1000;
+    height: 100%;
+    color: #000000;
+    border-right: 2px solid #FFFFFF;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .img-txt::before {
+    content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  border-right: 2px solid #FFFFFF;
+  overflow: hidden;
+  animation: IntroAnimation 4s linear forwards;
+  white-space: nowrap;
+  }
 }

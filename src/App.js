@@ -6,7 +6,7 @@ import {
   ImageThree,
   ImageFour,
   ImageFive,
-  ScrollCheck
+  ScrollCheck,
 } from "./components";
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
         setqwirtyScale={setqwirtyScale}
       />
       <ImageFive />
-      <ScrollCheck />
+      {/* <ScrollCheck /> */}
     </div>
   );
 }
