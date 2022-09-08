@@ -183,19 +183,24 @@ header ul li
     list-style: none;
 }
 
-header ul li a
+header ul li .headerbutton
 {
     text-decoration: none;
-    padding: 6px 15px;
+    font-size: 1rem;
+    font-weight: bolder;
+    padding: 6px 20px;
     color: #000000;
+    background-color: transparent;
     border-radius: 20px;
+    border: none;
 }
 
-header ul li a:hover, 
-header ul li a.active
+header ul li .headerbutton:hover, 
+header ul li .headerbutton.active
 {
     background: #000000;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .reveal {
@@ -771,4 +776,14 @@ header ul li a.active
   .websitebutton {
     padding: 16px 48px;
   }
+}
+
+.scrollcheck {
+  position: fixed;
+  background-color: blue;
+  color: #FFFFFF;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }

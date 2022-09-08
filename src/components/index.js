@@ -5,4 +5,5 @@ export { default as ImageThree } from './ImageThree'
 export { default as ImageFour } from './ImageFour'
 export { default as ImageFive } from './ImageFive'
 export { default as Contact } from './Contact'
+export { default as ScrollCheck } from './ScrollCheck'
 
