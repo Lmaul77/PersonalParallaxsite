@@ -1,10 +1,8 @@
 import React, { useRef } from "react";
-import { useAlert } from "react-alert";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
-  const alert = useAlert();
 
   const sendEmail = (event) => {
     event.preventDefault();
@@ -20,7 +18,6 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log("message sent");
-          alert.show("Message sent successfully!");
         },
         (error) => {
           console.log(error.text);
